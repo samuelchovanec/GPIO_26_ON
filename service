@@ -1,8 +1,10 @@
 #!/usr/bin/python2.7
+import time
 from hosted import config, device, node, config
 config.restart_on_update()
 device.gpio.setup_pin(26, direction="out")
 device.gpio.set_pin_value(26, high=True)
+time.sleep(15)
 device.gpio.setup_pin(19, direction="out")
 device.gpio.set_pin_value(19, high=True)
 
